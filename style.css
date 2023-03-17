@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-size: 16px;
+    background-color: var(--Light-Gray-);
+}
+html {
+    font-family: system-ui, 'Segoe UI', 'Open Sans';
+}
+
+:root {
+    --Cyan-: hsl(179, 62%, 43%);
+    --Bright-Yellow-: hsl(71, 73%, 54%);
+    --Light-Gray-: hsl(204, 43%, 93%);
+    --Grayish-Blue-: hsl(218, 22%, 67%);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 50px 30px;
+    background-color: white;
+    border-radius: 10px;
+    overflow-x: hidden;
+}
+
+h1, h2, .gain {
+    padding-left: 30px;
+}
+h1 {
+    color: var(--Cyan-);
+}
+h2 {
+    color: var(--Bright-Yellow-);
+    margin-top: 0;
+}
+.gain {
+    max-width: 95%;
+    color: var(--Grayish-Blue-);
+    line-height: 2;
+    margin-top: 0;
+}
+.sub-container-2 {
+    width: 100%;
+    background-color: var(--Cyan-);
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;    
+}
+
+h3, h4{
+    color: var(--Light-Gray-);
+}
+.twenty-nine {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--Light-Gray-);
+}
+   
+#per-month {
+    position: relative;
+    top: -30px;
+    margin-left: 70px;
+    color: var(--Light-Gray-);
+}
+.full-access {
+    color: var(--Light-Gray-);
+    margin-top: -5px;
+}
+.button {
+    max-width: 90%;
+    height: 55px;
+    background-color: var(--Bright-Yellow-);
+    color: var(--Light-Gray-);
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+.sub-container-3 {
+    width: 100%; 
+    background-color: var(--Cyan-);
+    opacity: 0.5;
+    padding-left: 30px;
+}
+
+p:nth-child(2) {
+    color: var(--Light-Gray-);
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+
+@media (min-width: 768px) {
+    body {
+        display: flex;
+    }
+    .main-container {
+        max-width: 60%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, min-content);
+        margin: 80px 275px;        
+    }
+    .sub-container-1 {
+        grid-column: span 2;
+    }
+    .button {
+        max-width: 92.5%;
+    }   
+}
